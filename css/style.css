@@ -1,3 +1,7 @@
+:root {
+  --color-blue: #3665C1;
+}
+
 /**
  * Swiper 7.2.0
  * Most modern mobile touch slider and framework with hardware accelerated transitions
@@ -715,6 +719,10 @@ body {
   padding: 20px 1px 24px 1px;
 }
 
+.menu-header li a:hover {
+  color: var(--color-blue);
+}
+
 .header-menu {
   padding: 20px 0;
   border-bottom: 1px solid #CCCCCC;
@@ -815,7 +823,7 @@ body {
 }
 
 .my-phone,
-.my-email {
+.email {
   align-items: center;
   display: flex;
   font-weight: 550;
@@ -823,9 +831,9 @@ body {
   font-weight: 600;
 }
 
-.my-phone div,
-.my-email div {
-  color: #1e1e1e;
+.my-phone:hover,
+.email:hover {
+  color: var(--color-blue);
 }
 
 .my-phone {

@@ -1,3 +1,7 @@
+:root {
+    --color-blue: #3665C1;
+}
+
 @import './libs/swiper';
 @mixin font($fname, $fstyle, $fweight, $furl) {
     @font-face {
@@ -90,6 +94,9 @@ body {
     font-weight: 550;
     line-height: 1.125;
     padding: 20px 1px 24px 1px;
+    &:hover {
+        color: var(--color-blue)
+    }
 }
 
 .header-menu {
@@ -189,17 +196,15 @@ body {
 }
 
 .my-phone,
-.my-email {
+.email {
     align-items: center;
     display: flex;
     font-weight: 550;
     color: rgba(30, 30, 30, 0.9);
     font-weight: 600;
-}
-
-.my-phone div,
-.my-email div {
-    color: #1e1e1e;
+    &:hover {
+        color: var(--color-blue)
+    }
 }
 
 .my-phone {

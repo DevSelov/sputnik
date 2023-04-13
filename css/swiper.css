@@ -258,12 +258,6 @@
   right: auto;
   left: -24px;
 }
-@media (max-width: 1380px) {
-  .swiper-button-prev,
-  .swiper-rtl .swiper-button-next {
-    left: -48px;
-  }
-}
 
 .swiper-button-prev:after {
   content: "";
@@ -278,12 +272,6 @@
 .swiper-rtl .swiper-button-prev {
   right: calc(var(--size-btn) / 2 * -1);
   left: auto;
-}
-@media (max-width: 1380px) {
-  .swiper-button-next,
-  .swiper-rtl .swiper-button-prev {
-    right: -48px;
-  }
 }
 
 .swiper-button-next:after {

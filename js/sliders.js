@@ -35,3 +35,27 @@ document.querySelectorAll('[data-swiper=main]').forEach(el => {
     });
 
 });
+
+function mediaMax(value) {
+    return window.matchMedia(`(max-width: ${parseInt(value)}px)`).matches
+}
+
+function setPadding() {
+    if (mediaMax('600') && document.querySelector('.detail-block__content--text > .section-title')) {
+        let heightElem = document.querySelector('.detail-block__content--text .section-title').scrollHeight;
+        const PADDING = 20;
+        document.querySelector('.detail-block__box').style.paddingTop = `${heightElem + PADDING}px`;
+    }
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+    setPadding();
+});
+
+document.querySelector('.gamburger').addEventListener('click', () => {
+    document.querySelector('.header-menu').classList.add('_active');
+});
+
+document.querySelector('.esc-popup').addEventListener('click', () => {
+    document.querySelector('.header-menu').classList.remove('_active');
+});

@@ -840,11 +840,45 @@ html {
   display: flex;
   justify-content: space-between;
   padding: 20px 0;
+  position: relative;
 }
 
 @media (max-width: 992px) {
-  .header-top .my-address, .header-top .my-phone, .header-top .email, .header-top .button {
+  .header-top .my-address, .header-top .button {
     display: none;
+  }
+}
+
+@media (max-width: 650px) {
+  .header-top .my-phone {
+    position: absolute;
+    bottom: -20px;
+  }
+  .header-top .email {
+    position: absolute;
+    bottom: -20px;
+    right: 0;
+  }
+}
+
+@media (max-width: 650px) {
+  .header-top .my-phone {
+    font-size: 12px;
+  }
+  .header-top .my-phone:after {
+    width: 20px;
+    height: 20px;
+    background-size: cover;
+    margin-left: 10px;
+  }
+  .header-top .email {
+    font-size: 12px;
+  }
+  .header-top .email:after {
+    width: 20px;
+    height: 20px;
+    background-size: cover;
+    margin-left: 10px;
   }
 }
 
@@ -980,11 +1014,11 @@ html {
 
 @media (max-width: 500px) {
   .banner-top {
-    margin: 30px 0;
+    margin: 40px 0 30px 0;
   }
   .banner-top .swiper-button-next,
 .banner-top .swiper-button-prev {
-    display: none;
+    --size-btn: 28px;
   }
 }
 
@@ -1257,10 +1291,6 @@ a {
   .proizv .swiper-slide {
     width: 120px;
     height: 76px;
-  }
-  .proizv .swiper-button-next,
-.proizv .swiper-button-prev {
-    display: none;
   }
 }
 
